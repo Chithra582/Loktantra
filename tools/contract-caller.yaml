@@ -1,0 +1,20 @@
+name: contract-caller
+description: Dispatch read and write function calls to verified Solidity voting smart contracts.
+input_schema:
+  type: object
+  properties:
+    contract_address:
+      type: string
+      description: Deployed EVM contract address (0x...).
+    function_name:
+      type: string
+      enum: [castVote, getCandidate, getElectionDetails, hasVoted]
+      description: Target smart contract function to invoke.
+    params:
+      type: array
+      items:
+        type: string
+      description: Encoded function parameters.
+  required:
+    - contract_address
+    - function_name

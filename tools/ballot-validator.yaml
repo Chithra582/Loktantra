@@ -1,0 +1,17 @@
+name: ballot-validator
+description: Validate that voter wallet addresses meet election temporal and double-voting requirements.
+input_schema:
+  type: object
+  properties:
+    wallet_address:
+      type: string
+      description: 42-character Ethereum wallet address (0x...).
+    election_id:
+      type: integer
+      description: Target election ID.
+    current_timestamp:
+      type: integer
+      description: Current block timestamp.
+  required:
+    - wallet_address
+    - election_id

@@ -1,0 +1,14 @@
+name: kyc-anonymizer
+description: Anonymize off-chain voter KYC data and issue unlinked cryptographic voting tokens.
+input_schema:
+  type: object
+  properties:
+    voter_token:
+      type: string
+      description: Single-use verification token from backend auth.
+    election_id:
+      type: integer
+      description: Target election identifier.
+  required:
+    - voter_token
+    - election_id

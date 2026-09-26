@@ -1,0 +1,16 @@
+name: tally-calculator
+description: Calculate candidate vote percentages, verify mathematical parity, and compute integrity scores.
+input_schema:
+  type: object
+  properties:
+    candidate_votes:
+      type: array
+      items:
+        type: integer
+      description: Array of vote counts per registered candidate.
+    total_ballots_emitted:
+      type: integer
+      description: Total vote cast events logged on the blockchain.
+  required:
+    - candidate_votes
+    - total_ballots_emitted

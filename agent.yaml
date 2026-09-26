@@ -1,0 +1,66 @@
+spec_version: "0.1.0"
+name: "loktantra-agent"
+version: "1.0.0"
+description: >
+  Autonomous decentralized governance, cryptographic voter verification, and smart contract election
+  audit intelligence agent for Loktantra. Coordinates off-chain KYC identity separation, on-chain ballot
+  casting on EVM blockchains, double-vote prevention, and immutable election tally verification.
+author: "Chithra R"
+license: "MIT"
+
+model:
+  preferred: "gemini-2.0-flash"
+  fallback:
+    - "gpt-4o"
+    - "claude-3-5-sonnet"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - ballot-contract-coordinator
+  - voter-eligibility-verifier
+  - election-tally-auditor
+  - cryptographic-privacy-guard
+
+tools:
+  - contract-caller
+  - kyc-anonymizer
+  - tally-calculator
+  - ballot-validator
+
+runtime:
+  max_turns: 10
+  temperature: 0.1
+  timeout: 120
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - gdpr
+    - soc2
+  data_governance:
+    pii_handling: redact
+    data_classification: internal
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - governance
+  - blockchain
+  - solidity
+  - web3
+  - voting
+  - smart-contracts
+  - nextjs
+  - ethereum
+  - developer-tools
+
+metadata:
+  domain: "governance"
+  category: "Other"
